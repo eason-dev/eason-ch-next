@@ -5,28 +5,40 @@ import { useTheme } from 'next-themes'
 import { useEffect, useState } from 'react'
 
 export function ThemeToggle() {
-  const { theme, setTheme } = useTheme()
+  const { theme, setTheme, resolvedTheme } = useTheme()
   const [mounted, setMounted] = useState(false)
 
   useEffect(() => {
     setMounted(true)
-  }, [])
+    console.log('Theme Debug:', { theme, resolvedTheme })
+  }, [theme, resolvedTheme])
 
   if (!mounted) {
-    return null
+    return (
+      <div className="fixed top-6 right-6 z-50 p-3 rounded-full bg-white/90 dark:bg-gray-800/90 backdrop-blur-md border border-gray-200 dark:border-gray-700 shadow-lg">
+        <div className="h-5 w-5" />
+      </div>
+    )
   }
+
+  const isDark = resolvedTheme === 'dark'
 
   return (
     <button
-      onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-      className="fixed top-6 right-6 z-50 p-3 rounded-full bg-card/80 backdrop-blur-md border border-border hover:bg-accent transition-all duration-300 group shadow-lg"
-      aria-label="Toggle theme"
+      onClick={() => {
+        const newTheme = isDark ? 'light' : 'dark'
+        console.log('Switching theme to:', newTheme)
+        setTheme(newTheme)
+      }}
+      className="fixed top-6 right-6 z-50 p-3 rounded-full bg-white/90 dark:bg-gray-800/90 backdrop-blur-md border border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-700 transition-all duration-300 group shadow-lg"
+      aria-label={`Switch to ${isDark ? 'light' : 'dark'} theme`}
     >
-      {theme === 'dark' ? (
-        <Sun className="h-5 w-5 text-foreground group-hover:rotate-12 transition-transform duration-300" />
+      {isDark ? (
+        <Sun className="h-5 w-5 text-yellow-500 group-hover:rotate-12 transition-transform duration-300" />
       ) : (
-        <Moon className="h-5 w-5 text-foreground group-hover:-rotate-12 transition-transform duration-300" />
+        <Moon className="h-5 w-5 text-blue-600 group-hover:-rotate-12 transition-transform duration-300" />
       )}
+      <div className="sr-only">Current: {resolvedTheme}</div>
     </button>
   )
 }

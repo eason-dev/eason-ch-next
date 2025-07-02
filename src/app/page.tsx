@@ -111,8 +111,16 @@ const features = [
 
 export default function Home() {
   return (
-    <main className="min-h-screen p-4 lg:p-8">
+    <main className="min-h-screen p-4 lg:p-8 bg-background text-foreground">
       <ThemeToggle />
+      
+      {/* Debug indicator */}
+      <div className="fixed top-6 left-6 z-50 p-2 text-xs bg-white dark:bg-black border border-gray-300 dark:border-gray-600 rounded">
+        <div className="text-black dark:text-white">
+          BG: <span className="px-1 bg-background">test</span>
+        </div>
+      </div>
+      
       <div className="max-w-6xl mx-auto pt-16 lg:pt-8">
         <BentoGrid>
           {features.map((feature, idx) => (
