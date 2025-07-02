@@ -1,36 +1,113 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Eason Chang - Personal Homepage
 
-## Getting Started
+A modern, animated personal homepage built with Next.js 15, featuring a beautiful Bento box layout inspired by Apple's design language.
 
-First, run the development server:
+## ✨ Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- **🎨 Modern Bento Grid Layout** - Apple-inspired card-based design
+- **🌙 Dark/Light Mode** - Seamless theme switching with next-themes
+- **🎭 Smooth Animations** - Micro-interactions powered by Framer Motion
+- **📱 Fully Responsive** - Optimized for all devices
+- **🚀 Performance Optimized** - Built with Next.js 15 and TailwindCSS v4
+- **🔍 SEO Friendly** - Comprehensive meta tags, sitemap, and structured data
+- **⚡ Fast Loading** - Optimized for Core Web Vitals
+
+## 🛠 Tech Stack
+
+- **Framework**: Next.js 15 with App Router
+- **Styling**: TailwindCSS v4
+- **Animations**: Framer Motion
+- **Theme**: next-themes
+- **Icons**: Lucide React
+- **SEO**: next-seo + next-sitemap
+- **Language**: TypeScript
+- **Package Manager**: pnpm
+
+## 🚀 Getting Started
+
+1. **Install dependencies**
+   ```bash
+   pnpm install
+   ```
+
+2. **Run the development server**
+   ```bash
+   pnpm dev
+   ```
+
+3. **Open your browser**
+   Navigate to [http://localhost:3000](http://localhost:3000)
+
+## 📁 Project Structure
+
+```
+src/
+├── app/
+│   ├── layout.tsx          # Root layout with SEO and theme provider
+│   ├── page.tsx            # Homepage
+│   └── globals.css         # Global styles and animations
+├── components/
+│   ├── cards/              # Individual Bento cards
+│   │   ├── profile-card.tsx
+│   │   ├── github-card.tsx
+│   │   └── ...
+│   ├── ui/                 # Reusable UI components
+│   │   ├── bento-card.tsx  # Base card component
+│   │   └── theme-toggle.tsx
+│   ├── bento-grid.tsx      # Main grid layout
+│   ├── theme-provider.tsx  # Theme configuration
+│   └── structured-data.tsx # SEO structured data
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🎨 Customization
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Adding New Cards
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+1. Create a new card component in `src/components/cards/`
+2. Follow the existing pattern using the `BentoCard` wrapper
+3. Add your card to the `BentoGrid` component
 
-## Learn More
+### Updating Personal Information
 
-To learn more about Next.js, take a look at the following resources:
+Update the following files with your information:
+- `src/components/cards/profile-card.tsx` - Name and title
+- `src/components/cards/*.tsx` - Social media links
+- `src/app/layout.tsx` - SEO metadata
+- `src/components/structured-data.tsx` - Structured data
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🚀 Deployment
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Vercel (Recommended)
 
-## Deploy on Vercel
+1. Push your code to GitHub
+2. Connect your repository to Vercel
+3. Deploy automatically with optimized settings
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Build for Production
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```bash
+pnpm build
+```
+
+## 📊 Performance
+
+- **Lighthouse Score**: Optimized for 100/100 across all metrics
+- **Core Web Vitals**: Optimized
+- **Bundle Size**: Minimal with code splitting
+- **SEO**: Comprehensive optimization
+
+## 🔗 Social Links
+
+The homepage includes cards for:
+- GitHub
+- Twitter/X
+- LinkedIn
+- Email
+- Personal Website
+- Resume
+- Buy Me a Coffee
+- Facebook
+
+---
+
+Built with ❤️ by [Eason Chang](https://easonchang.com)
