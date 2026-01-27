@@ -11,10 +11,13 @@ export function StructuredData() {
     "url": "https://eason.ch",
     "sameAs": [
       "https://easonchang.com",
-      "https://www.linkedin.com/in/easonchang101/",
-      "https://github.com/Kamigami55",
-      "https://twitter.com/EasonChang_me",
-      "https://www.facebook.com/chang.ying.hsiang"
+      "https://www.linkedin.com/in/easonchang101",
+      "https://github.com/eason-dev",
+      "https://x.com/easondev",
+      "https://www.facebook.com/easondev",
+      "https://www.threads.com/@easondev",
+      "https://www.instagram.com/easondev",
+      "https://bsky.app/profile/easondev.bsky.social"
     ],
     "email": "eason@easonchang.com",
     "nationality": "Taiwan",

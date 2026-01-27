@@ -1,6 +1,7 @@
 import { BentoGrid, BentoCard } from '@/components/magicui/bento-grid'
 import { ThemeToggle } from '@/components/ui/theme-toggle'
-import { Github, Twitter, Linkedin, Mail, Coffee, FileText, Globe, Facebook } from 'lucide-react'
+import { Github, Twitter, Linkedin, Mail, Coffee, FileText, Globe, Facebook, Instagram } from 'lucide-react'
+import { SiThreads, SiBluesky } from 'react-icons/si'
 
 const features = [
   {
@@ -19,7 +20,7 @@ const features = [
   {
     name: "GitHub",
     description: "Open source projects and contributions",
-    href: "https://github.com/Kamigami55",
+    href: "https://github.com/eason-dev",
     cta: "View Projects",
     className: "col-span-1 row-span-1",
     background: (
@@ -30,9 +31,9 @@ const features = [
     Icon: Github,
   },
   {
-    name: "Twitter",
+    name: "X (Twitter)",
     description: "Follow my tech journey and insights",
-    href: "https://twitter.com/EasonChang_me",
+    href: "https://x.com/easondev",
     cta: "Follow",
     className: "col-span-1 row-span-1",
     background: (
@@ -97,7 +98,7 @@ const features = [
   {
     name: "Facebook",
     description: "Connect on social media",
-    href: "https://www.facebook.com/chang.ying.hsiang",
+    href: "https://www.facebook.com/easondev",
     cta: "Add Friend",
     className: "col-span-1 row-span-1",
     background: (
@@ -106,6 +107,45 @@ const features = [
       </div>
     ),
     Icon: Facebook,
+  },
+  {
+    name: "Threads",
+    description: "Follow me on Threads",
+    href: "https://www.threads.com/@easondev",
+    cta: "Follow",
+    className: "col-span-1 row-span-1",
+    background: (
+      <div className="absolute inset-0 bg-gradient-to-br from-gray-800/20 to-black/20">
+        <div className="absolute inset-0 bg-gradient-to-t from-background/50 to-transparent" />
+      </div>
+    ),
+    Icon: SiThreads,
+  },
+  {
+    name: "Instagram",
+    description: "See my life and projects",
+    href: "https://www.instagram.com/easondev",
+    cta: "Follow",
+    className: "col-span-1 row-span-1",
+    background: (
+      <div className="absolute inset-0 bg-gradient-to-br from-pink-500/20 to-purple-600/20">
+        <div className="absolute inset-0 bg-gradient-to-t from-background/50 to-transparent" />
+      </div>
+    ),
+    Icon: Instagram,
+  },
+  {
+    name: "Bluesky",
+    description: "Join me on the decentralized web",
+    href: "https://bsky.app/profile/easondev.bsky.social",
+    cta: "Follow",
+    className: "col-span-1 row-span-1",
+    background: (
+      <div className="absolute inset-0 bg-gradient-to-br from-sky-400/20 to-blue-500/20">
+        <div className="absolute inset-0 bg-gradient-to-t from-background/50 to-transparent" />
+      </div>
+    ),
+    Icon: SiBluesky,
   },
 ]
 

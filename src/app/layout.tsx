@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Eason Chang - Fullstack Engineer | Maker | Indie-hacker",
     description: "Personal homepage of Eason Chang - Connect with me on social media and explore my projects.",
-    creator: "@EasonChang_me",
+    creator: "@easondev",
   },
   robots: {
     index: true,
